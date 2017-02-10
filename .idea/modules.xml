@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/pms.iml" filepath="$PROJECT_DIR$/pms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pmsweb/pmsweb.iml" filepath="$PROJECT_DIR$/../pmsweb/pmsweb.iml" />
     </modules>
   </component>
 </project>

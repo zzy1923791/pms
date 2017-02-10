@@ -16,8 +16,8 @@ public class AuthenticationRest {
     @Autowired
     AuthenticationService authenticationService;
 
-    @RequestMapping("/Authentication")
-    public int Authentication(@RequestParam int i_user_key, @RequestParam  String c_function_uri){
+    @RequestMapping("/authentication")
+    public int authentication(@RequestParam int i_user_key, @RequestParam  String c_function_uri){
 
         int i = authenticationService.i_accept(i_user_key,c_function_uri);
         return i;

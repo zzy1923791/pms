@@ -14,9 +14,9 @@ public class AuthenticationTest {
     @Test
     public void testAuthentication(){
         String response = WebClient.create(baseAddress)
-                .path("/Authentication")
+                .path("/authentication")
                 .replaceQueryParam("i_user_key",9)
-                .replaceQueryParam("c_function_uri","AMS_SV13_F133")
+                .replaceQueryParam("c_function_uri","/AMS_SV13_F133")
                 .accept(MediaType.APPLICATION_JSON)
                 .get(String.class);
 
@@ -26,9 +26,9 @@ public class AuthenticationTest {
     @Test
     public void testAuthentication1(){
         String response = WebClient.create(baseAddress)
-                .path("/Authentication")
+                .path("/authentication")
                 .replaceQueryParam("i_user_key",0)
-                .replaceQueryParam("c_function_uri","AMS_SV13_F133")
+                .replaceQueryParam("c_function_uri","/AMS_SV13_F133")
                 .accept(MediaType.APPLICATION_JSON)
                 .get(String.class);
 
@@ -38,9 +38,9 @@ public class AuthenticationTest {
     @Test
     public void testAuthentication2(){
         String response = WebClient.create(baseAddress)
-                .path("/Authentication")
+                .path("/authentication")
                 .replaceQueryParam("i_user_key",9)
-                .replaceQueryParam("c_function_uri","CMS_SV13_F133")
+                .replaceQueryParam("c_function_uri","/CMS_SV13_F133")
                 .accept(MediaType.APPLICATION_JSON)
                 .get(String.class);
 

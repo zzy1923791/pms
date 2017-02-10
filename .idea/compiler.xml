@@ -22,11 +22,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="angularweb" />
         <module name="pms" />
+        <module name="pmsweb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="angularweb" target="1.5" />
       <module name="pms" target="1.5" />
+      <module name="pmsweb" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
