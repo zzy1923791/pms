@@ -25,5 +25,5 @@ public interface UserService {
     List<User> get_userlist(List<Integer> i_keys);
 
     //
-    String jsonGetUsers(String jsonIds);
+    String jsonGetUsers(String json);
 }

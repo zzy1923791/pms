@@ -26,7 +26,19 @@ public class UserServiceImpl implements UserService {
         return userDao.findByKeys(i_keys);
     }
 
-    public String jsonGetUsers(String jsonIds) {
+    public String jsonGetUsers(String json) {
+
+//        List<Integer> iKeys = new ArrayList<Integer>();
+//        iKeys.add(1);
+//        iKeys.add(3);
+//        iKeys.add(5);
+//        iKeys.add(11);
+//
+//        List<User> users = userDao.findByKeys(iKeys);
+//
+//        //转换成输出 Json
+//        ObjectMapper mapper = new ObjectMapper();
+//        String srtJson = mapper.writeValueAsString(users);
 
         return null;
     }

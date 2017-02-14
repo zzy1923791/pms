@@ -13,4 +13,5 @@ import java.util.List;
 public interface UserDao {
     User findByKey(int i_user_key);
     List<User> findByKeys(List<Integer> i_keys);
+
 }
