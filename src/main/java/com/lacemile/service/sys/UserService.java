@@ -5,6 +5,7 @@ package com.lacemile.service.sys;
  */
 import com.lacemile.model.sys.user.User;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface UserService {
@@ -25,5 +26,5 @@ public interface UserService {
     List<User> get_userlist(List<Integer> i_keys);
 
     //
-    String jsonGetUsers(String json);
+    String jsonGetUsers(String json) throws IOException;
 }

@@ -2,6 +2,7 @@ package com.lacemile.configuration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
@@ -20,5 +21,13 @@ public class AppInitializer implements WebApplicationInitializer{
 
         servlet.setLoadOnStartup(1);
         servlet.addMapping("/");
+
+        /*
+        * 注册字符集过滤器
+        */
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+        characterEncodingFilter.setEncoding("UTF-8");
+        characterEncodingFilter.setForceEncoding(true);
+
     }
 }

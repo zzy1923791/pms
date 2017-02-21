@@ -1,11 +1,14 @@
 package com.lacemile.service.sys;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lacemile.dao.sys.user.UserDao;
 import com.lacemile.model.sys.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,21 +29,21 @@ public class UserServiceImpl implements UserService {
         return userDao.findByKeys(i_keys);
     }
 
-    public String jsonGetUsers(String json) {
+    public String jsonGetUsers(String json) throws IOException {
 
-//        List<Integer> iKeys = new ArrayList<Integer>();
-//        iKeys.add(1);
-//        iKeys.add(3);
-//        iKeys.add(5);
-//        iKeys.add(11);
-//
-//        List<User> users = userDao.findByKeys(iKeys);
-//
-//        //转换成输出 Json
-//        ObjectMapper mapper = new ObjectMapper();
-//        String srtJson = mapper.writeValueAsString(users);
+        List<Integer> iKeys = new ArrayList<Integer>();
+        iKeys.add(1);
+        iKeys.add(3);
+        iKeys.add(5);
+        iKeys.add(11);
 
-        return null;
+        List<User> users = userDao.findByKeys(iKeys);
+
+        //转换成输出 Json
+        ObjectMapper mapper = new ObjectMapper();
+        String srtJson = mapper.writeValueAsString(users);
+
+        return srtJson;
     }
 
 }

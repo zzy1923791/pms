@@ -23,7 +23,7 @@ public class UserTest {
     private static final List<Object> providerList = new ArrayList<Object>();
 
     @Test
-    public void getUserTest(){
+    public void getUserTest() {
         String user = WebClient.create(baseAddress)
                 .path("/get_user")
                 .replaceQueryParam("i_user_key",1)

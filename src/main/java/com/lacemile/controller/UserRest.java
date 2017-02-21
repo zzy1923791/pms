@@ -24,7 +24,7 @@ public class UserRest {
         return u;
     }
 
-    @RequestMapping("/get_user1")
+    @RequestMapping(value = "/get_user1", produces = "application/json;charset=UTF-8")
     public String jsonOut(@RequestParam String jsonIn) throws IOException {
         return userService.jsonGetUsers(jsonIn);
     }
